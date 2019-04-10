@@ -34,6 +34,7 @@ case "${unameOut}" in
       curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
       chsh -s /usr/local/bin/zsh
       curl -O https://bootstrap.pypa.io/get-pip.py
+			cp .zshrc ~/.zshrc
 			;;
     CYGWIN*)    machine=Cygwin;;
     MINGW*)     echo "You have made a horrible mistake. Find a better machine" machine=MinGw;;
