@@ -34,8 +34,6 @@ case "${unameOut}" in
       curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
       chsh -s /usr/local/bin/zsh
       curl -O https://bootstrap.pypa.io/get-pip.py
-      python3 get-pip.py --user
-      pip3 install awscli --upgrade --user;;
     CYGWIN*)    machine=Cygwin;;
     MINGW*)     echo "You have made a horrible mistake. Find a better machine" machine=MinGw;;
     *)          machine="UNKNOWN:${unameOut}"
