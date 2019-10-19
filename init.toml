@@ -40,8 +40,6 @@ default_height = 30
   name = "lang#go"
 
 [[layers]]
-  name = "lang#python"
-[[layers]]
   name = "autocomplete"
   [options]
     autocomplete_method = "deoplete"

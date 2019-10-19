@@ -6,7 +6,7 @@ case "${unameOut}" in
       xcode-select --install
       ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       brew cask install iterm2 google-chrome slack
-      brew install zsh zsh-completions git nvim python python3 wget cmake macvim node zip tar docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
+      brew install zsh zsh-completions git nvim python python3 wget cmake macvim node zip docker docker-compose docker-machine xhyve docker-machine-driver-xhyve 
       sudo easy_install pip
       sudo chown root:wheel /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
       sudo chmod u+s /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
@@ -21,7 +21,6 @@ case "${unameOut}" in
       curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-267.0.0-darwin-x86_64.tar.gz
       tar -xzvf *.tar.gz
       ./google-cloud-sdk/install.sh
-      gcloud components install kubectl
       npm -g install remark
       npm -g install remark-cli
       npm -g install remark-stringify
@@ -52,18 +51,9 @@ case "${unameOut}" in
       ./goinstall.sh
       go get -u github.com/jstemmer/gotags
       cp init.toml ~/.Spacevim.d/init.toml
-      open -a iTerm .
+      open -a iTerm 
 			;;
     CYGWIN*)    machine=Cygwin;;
     MINGW*)     echo "You have made a horrible mistake. Find a better machine" machine=MinGw;;
     *)          machine="UNKNOWN:${unameOut}"
 esac
-`
-# if minikube version; then
-#     echo 'Minikube installed resetting environment'
-# else
-#     echo 'Installing minikube'
-     curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64 \
-     chmod +x minikube
-     sudo mv minikube /usr/local/bin
-# fi
